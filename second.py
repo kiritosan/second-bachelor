@@ -52,7 +52,7 @@ async def get_school(num: str):
     # 或许最新公布的一所对外招收第二学位的学校
     head = result.split('\n')[1]
     # 返回前五所对外招收第二学位的学校
-    top = result.split('\n')[1:6]
+    top = "\n".join(result.split('\n')[1:6])
     if num == '一':
         return f"最新一所为{head}"
     if num == '五':
